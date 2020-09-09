@@ -1,0 +1,8 @@
+Atividade 1: Para serializar o objeto que contém a lista de palavras e a contagem, utilizarei o formato JSON. Para diminuir a carga de trabalho sobre o cliente e minimizar o tráfego de dados em rede, optei por implementar a lógica de contagem, ordenação e formatação do lado do servidor. Nesse sentido, podemos dizer que a camada de aplicação está totalmente contida do lado cliente e que a camada de processamento está totalmente contida no lado servidor. Esse é um modelo arquitetural muito comum, mas que tem sido gradativamente substituído a medida que as Single Page Applications se tornam mais populares, englobando grande parte do processamento do lado do cliente também.
+
+Atividade 2:
+Para armazenar cada entrada, utilizarei uma tupla na forma (palavra,contagem). Para agrupar as tuplas ordenadamente, utilizarei uma lista. Quando pronta, essa lista é convertida para JSON e o resultado é enviado para o cliente que só tem a função de parsear o JSON e exibir a listagem.
+Ao longo de toda interação, o cliente envia requisições para o servidor contendo o nome do arquivo de interesse. O servidor realiza o processamento e retorna uma string com a listagem codificada em JSON. A interação termina quando o cliente encerra a conexão, fazendo com que o servidor receba uma string vazia de dados. Nesse momento, o servidor encerra a comunicação com o cliente atual e espera a chegada de um novo cliente.
+
+Atividade 3:
+No código
