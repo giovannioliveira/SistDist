@@ -1,0 +1,5 @@
+1) Usando a função select podemos multiplexar o atendimento de novas requisições de abertura de conexão e novas entradas na linha de comando. Os comandos disponíveis na CLI são:
+- "end": finaliza servidor se não há conexões ativas; ou imprime uma lista com as conexões ativas, caso contrário.
+- "status": imprime uma lista com as conexões ativas.
+
+2) Para tornar o servidor concorrente, fiz o uso de Threads. Optei por usar esse tipo de estrutura ao invés de processos independente devido ao overhead menor para criar threads e a facilidade que elas oferecem para realizar a comunicação entre os diversos fluxos de execução.
