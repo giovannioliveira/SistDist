@@ -50,6 +50,7 @@ class MessageAgent:
                     if not chunk:
                         break
                     buffer += str(chunk, encoding='utf-8')
+                conn.close()
                 obj = json.loads(buffer)
                 self.on_event(self.EVENT_MESSAGE,obj)
 
