@@ -1,0 +1,18 @@
+Implementação parcial do algoritmo distribuído Chord
+- chord.py: inicializa e configura os nós do cluster
+- client.py: cliente para interação com os nós do cluster
+
+Instruções de uso:
+1) Inicializar chord.py:
+> python3 chord.py
+* a variável initPort define a porta inicial como 9000. os demais nós ocuparão os endereços subsequentes (9001-9003).
+** a variável m define o número de nós do cluster
+*** para facilitar o debug, o chord.py roda em foreground, exibindo na saída padrão periodicamente um log com informação sobre os nós.
+
+2) Em outro terminal, inicializar um cliente:
+> python3 client.py
+> 
+
+3) Para interagir com o cliente, entre com os comandos "get" e "set", da seguinte forma:
+> get [KEY] [NODE] (ex.: get test 9000)
+> set [KEY] [VALUE] [NODE] (ex: set test 100 9000)
